@@ -1,4 +1,4 @@
-require("dotenv");            
+require("dotenv").config();            
 const mongoose=require('mongoose');
 mongoose.connect('mongodb+srv://admin:'+process.env.PASS+'@avi.j3vc0.mongodb.net/cars?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
             
