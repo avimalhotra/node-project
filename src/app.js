@@ -5,6 +5,7 @@ const nunjucks=require("nunjucks");
 const app=express();
 const admin=require('./routes/admin');
 const api=require("./controllers/api");
+const port=process.env.PORT || 3000;
 
 const db=require('./dao');
 const car=require("./models/cars");
@@ -27,7 +28,6 @@ app.get("/",(req,res)=>{
 });
 app.get("/api",api.getApi);
 
-
-app.listen(process.env.PORT,()=>{
-    console.log(`app running at http://127.0.0.1:${process.env.PORT}`);
+app.listen(port,()=>{
+    console.log(`app running at http://127.0.0.1:${port} in ${process.env.NODE_ENV}`);
 });

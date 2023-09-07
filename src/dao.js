@@ -12,4 +12,5 @@ db.on('error', (err)=> { throw err });
 db.once('open',  (err,data)=> {
     console.log(`${db.name} db connected!`);         
 });
+
             
